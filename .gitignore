@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+wheels/
+*.whl
+*.tar.gz
+*.zip
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Databases
+*.db
+*.sqlite3
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temps
+*.log
+*.tmp
+.DS_Store  # Mac files, but good to include
+Thumbs.db  # Windows thumbnails
+
+# VS Code settings
+.vscode/
