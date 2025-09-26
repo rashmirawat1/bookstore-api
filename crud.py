@@ -4,16 +4,16 @@ from .schemas import UserCreate, BookCreate
 from passlib.context import CryptContext
 from sqlalchemy.exc import IntegrityError, NoResultFound
 from fastapi import HTTPException
+from .models import SessionLocal
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-def get_user_by_username(db: Session, username: str):
+def get_db():
+    db = SessionLocal()
     try:
-        return db.query(User).filter(User.username == username).one()  # Use .one() to raise NoResultFound
-    except NoResultFound:
-        raise HTTPException(status_code=404, detail="User not found")
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Database query error: {str(e)}")
+        yield db
+    finally:
+        db.close()
 
 def create_user(db: Session, user: UserCreate):
     try:
@@ -24,11 +24,19 @@ def create_user(db: Session, user: UserCreate):
         db.refresh(db_user)
         return db_user
     except IntegrityError:
-        db.rollback()  # Undo partial changes if unique constraint fails
+        db.rollback()  
         raise HTTPException(status_code=400, detail="Username or email already exists")
     except Exception as e:
         db.rollback()
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+    
+def get_user_by_username(db: Session, username: str):
+    try:
+        return db.query(User).filter(User.username == username).one()  # Use .one() to raise NoResultFound
+    except NoResultFound:
+        raise HTTPException(status_code=404, detail="User not found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Database query error: {str(e)}")
 
 def create_book(db: Session, book: BookCreate):
     try:
