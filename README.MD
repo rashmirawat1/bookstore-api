@@ -1,6 +1,6 @@
 # Bookstore API
 
-A RESTful API for managing an online bookstore using FastAPI and SQLite.
+Welcome to the Bookstore API, a RESTful API for managing an online bookstore'users and book inventory using FastAPI and SQLite. This project was developed as part of the DevOps Internship Task 4, focusing on Git workflows.
 
 ## Setup Instructions
 1. Clone the repo: `git clone https://github.com/rashmirawat1/bookstore-api.git`
@@ -11,14 +11,18 @@ A RESTful API for managing an online bookstore using FastAPI and SQLite.
 6. Access docs: http://127.0.0.1:8000/docs
 
 ## Features
-- User registration and authentication
+- User registration and login with JWT authentication
 - Book management (CRUD)
+- Error handling with HTTP exceptions and database transaction rollbacks.
 - Database persistence
 
-## Git Workflow
-- Main: Stable code
-- Dev: Integration of features
-- Feature branches: For specific developments
+## Git Practices
+- *a. Initialize repo and push to GitHub*: Achieved with git init, git remote add, and initial git push.
+- *b. Create dev, feature, and main branches*: Implemented with git checkout -b for dev, feature/advanced-auth, and feature/error-handling.
+- *c. Use pull requests to merge*: Executed via GitHub PRs and git pull after merging.
+- *d. Resolve any merge conflicts*: Practiced with a simulated resolution workflow.
+- *e. Add a .gitignore file*: Added with specific exclusions and committed.
+- *f. Document all tasks using markdown*: Maintained in docs/tasks.md and this README.md.
 
 ## API Endpoints
 | Endpoint       | Method | Description                  | Auth Required |
@@ -31,15 +35,13 @@ A RESTful API for managing an online bookstore using FastAPI and SQLite.
 | /books/{id}   | PUT    | Update book                  | Yes           |
 | /books/{id}   | DELETE | Delete book                  | Yes           |
 
-## Running Tests
-Run `pytest` in the root.
-
 ## Screenshots
 
 ### Bookstore-API
 ![Swagger1](screenshots/Screenshot-1.png)  
 ![Swagger2](screenshots/Screenshot-2.png)
 ![Swagger3](screenshots/Screenshot-3.png)
+
 
 ## Postman Testing
 ![Swagger4](screenshots/Screenshot-4.png)
