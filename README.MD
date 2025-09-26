@@ -17,12 +17,12 @@ Welcome to the Bookstore API, a RESTful API for managing an online bookstore'use
 - Database persistence
 
 ## Git Practices
-- *a. Initialize repo and push to GitHub*: Achieved with git init, git remote add, and initial git push.
-- *b. Create dev, feature, and main branches*: Implemented with git checkout -b for dev, feature/advanced-auth, and feature/error-handling.
-- *c. Use pull requests to merge*: Executed via GitHub PRs and git pull after merging.
-- *d. Resolve any merge conflicts*: Practiced with a simulated resolution workflow.
-- *e. Add a .gitignore file*: Added with specific exclusions and committed.
-- *f. Document all tasks using markdown*: Maintained in docs/tasks.md and this README.md.
+-  Initialize repo and push to GitHub*: Achieved with git init, git remote add, and initial git push.
+-  Create dev, feature, and main branches*: Implemented with git checkout -b for dev, feature/advanced-auth, and feature/error-handling.
+-  Use pull requests to merge*: Executed via GitHub PRs and git pull after merging.
+-  Resolve any merge conflicts*: Practiced with a simulated resolution workflow.
+-  Add a .gitignore file*: Added with specific exclusions and committed.
+-  Document all tasks using markdown*: Maintained in docs/tasks.md and this README.md.
 
 ## API Endpoints
 | Endpoint       | Method | Description                  | Auth Required |
