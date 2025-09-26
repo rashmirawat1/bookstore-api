@@ -35,4 +35,11 @@ A RESTful API for managing an online bookstore using FastAPI and SQLite.
 Run `pytest` in the root.
 
 ## Screenshots
-![Swagger Docs](screenshots/swagger.png)  # Add actual screenshot
+
+### Bookstore-API
+![Swagger1](screenshots/Screenshot-1.png)  
+![Swagger2](screenshots/Screenshot-2.png)
+![Swagger3](screenshots/Screenshot-3.png)
+
+## Postman Testing
+![Swagger4](screenshots/Screenshot-4.png)
